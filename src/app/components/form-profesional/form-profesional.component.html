@@ -1,0 +1,24 @@
+
+<div class="container-gral">
+  <h3>Añadir personal</h3>
+  <div class="container">
+    <div class="container-form">
+      <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      
+        <label class="form-label" for="first-name">First Name: </label>
+        <input class="form-control" id="first-name" type="text" formControlName="firstName">
+      
+        <label class="form-label" for="last-name">Last Name: </label>
+        <input class="form-control" id="last-name" type="text" formControlName="lastName">
+      
+        <label class="form-label" for="career">Career: </label>
+        <input class="form-control" id="career" type="text" formControlName="career">
+      
+        <div class="btn-container">
+          <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid">Enviar</button>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+</div>
